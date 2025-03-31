@@ -1,0 +1,169 @@
+/* Общие стили */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://i.ibb.co/ym83LbfT/2025-01-24-19-56-07.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Кнопки сверху справа */
+.button-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.button {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #000;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #000000;
+    transform: translateY(-5px);
+}
+
+/* Карточка профиля */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15); /* Полупрозрачный фон */
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 1200px;
+    min-height: 500px;
+}
+
+/* Фото профиля */
+.profile-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 50px;
+    border: 6px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Информация о пользователе */
+.profile-info {
+    flex: 1;
+}
+
+.nickname {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.position {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.bio {
+    font-size: 1.5rem;
+    color: #000000;
+    line-height: 1.7;
+}
+
+/* Раздел с комментариями */
+.comments-section {
+    width: 80%;
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.comments-section h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Поле ввода комментариев */
+.comment-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: none;
+    resize: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #000000;
+}
+
+.comment-button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #000000;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
+
+.comment-button:hover {
+    background-color: #000000;
+}
+
+/* Список комментариев */
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comment {
+    background-color: rgba(0, 0, 0, 0.5);  /* Менее прозрачный фон */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.comment-author {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.comment-text {
+    font-size: 1.4rem;
+    color: #ddd;
+    margin-top: 5px;
+}
+

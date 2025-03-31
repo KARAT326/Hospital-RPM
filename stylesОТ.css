@@ -1,0 +1,121 @@
+/* Общие стили */
+body {
+    margin: 0;
+    height: 100vh;  /* Высота страницы */
+    display: flex;
+    flex-direction: column;  /* Элементы располагаются по вертикали */
+    justify-content: center;  /* Центрируем по горизонтали */
+    align-items: center;  /* Центрируем по вертикали */
+    background-image: url('https://i.ibb.co/ym83LbfT/2025-01-24-19-56-07.webp');  /* Путь к изображению */
+    background-size: cover;  /* Фон будет растянут по размеру экрана */
+    background-position: center;  /* Фон будет центрирован */
+    background-repeat: no-repeat;  /* Фон не будет повторяться */
+}
+
+/* Стиль для заголовка */
+header {
+    text-align: center;
+    color: #000000;
+    font-size: 2rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Анимация для заголовка */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили для блока с департаментами */
+.departments {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Стили для каждой карточки департамента */
+.department {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Эффект при наведении на карточку */
+.department:hover {
+    transform: scale(1.05);
+}
+
+/* Стили для изображений в карточках */
+.department img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Стили для текста внутри карточки */
+.department p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #000000;
+}
+
+/* Контейнер для кнопок */
+.button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 0px;
+}
+
+/* Стили для кнопок */
+.button {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #000;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Эффект при наведении на кнопки */
+.button:hover {
+    background-color: #000000;
+    transform: translateY(-5px);
+}
+
+/* Эффект при нажатии на кнопки */
+.button:active {
+    transform: translateY(0);
+}
+
+/* Позиционирование кнопок */
+.button-container a:nth-child(1) {
+    margin-left: 0;
+}
+
+.button-container a:nth-child(2) {
+    margin-left: 10px;
+}
+
+.button-container a:nth-child(3) {
+    margin-left: 10px;
+}
+
+.button-container a:nth-child(4) {
+    margin-left: 10px;
+}

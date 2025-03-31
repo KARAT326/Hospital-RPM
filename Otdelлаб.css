@@ -1,0 +1,185 @@
+/* Стиль для всего тела страницы */
+body {
+    margin: 0;
+    min-height: 100vh;  /* Высота страницы, чтобы минимизировать прокрутку */
+    display: flex;
+    flex-direction: column;  /* Элементы располагаются по вертикали */
+    justify-content: flex-start;  /* Элементы будут располагаться сверху */
+    align-items: center;  /* Центрируем по горизонтали */
+    background-image: url('https://i.ibb.co/ym83LbfT/2025-01-24-19-56-07.webp');  /* Путь к изображению */
+    background-size: cover;  /* Фон будет растянут по размеру экрана */
+    background-position: center;  /* Фон будет центрирован */
+    background-repeat: no-repeat;  /* Фон не будет повторяться */
+    overflow-y: auto;  /* Добавлена вертикальная прокрутка */
+    padding-bottom: 30px; /* Добавлено пространство снизу для прокрутки */
+}
+
+/* Кнопки сверху справа */
+.button-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 10; /* Убедитесь, что кнопки всегда сверху */
+}
+
+.button {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #000;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #000000;
+    transform: translateY(-5px);
+}
+
+/* Блок информации об отделе */
+.department-info, .department-members {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    margin-top: 80px; /* Увеличиваем отступ сверху, чтобы опустить всю карточку заведующего ниже */
+}
+
+/* Карточка заведующего */
+.chief-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: center;
+}
+
+.chief-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Стили участников */
+.members-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.member-card {
+    width: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px; /* Добавляем отступ снизу */
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+}
+
+.member-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.nickname {
+    font-size: 4rem; /* Увеличен размер шрифта для ника */
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.position {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.bio {
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+}
+
+.chief-link {
+    font-size: 2rem;  /* Увеличено */
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.chief-link:hover {
+    text-decoration: underline;
+}
+
+.chief-position {
+    font-size: 1.5rem;  /* Увеличено */
+    color: rgb(0, 0, 0);
+}
+
+/* Контейнер для новостной ленты */
+.news-feed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 30px;
+}
+
+/* Карточки новостей */
+.news-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+}
+
+.news-item img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.news-item .news-content {
+    flex-grow: 1;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.news-item h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
